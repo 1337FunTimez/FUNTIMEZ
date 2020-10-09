@@ -1,7 +1,8 @@
 const Express = require("express");
 var http = require("http");
 var https = require("https");
-const { Server } = require('ws');
+const WebSocket = require('ws');
+const Server = WebSocket.Server;
 const app = Express();
 app.get("/specialurlshahaha-" + "supersecureright", (req, res) => {
   res.send(
