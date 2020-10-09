@@ -1,7 +1,7 @@
 const Express = require("express");
 var http = require("http");
 var https = require("https");
-const WebSocket = require("ws");
+const { Server } = require('ws');
 const app = Express();
 app.get("/specialurlshahaha-" + "supersecureright", (req, res) => {
   res.send(
@@ -35,7 +35,8 @@ app.get("/agus-" + "supersecureright", (req, res) => {
 });
 var id = [];
 var tre = false;
-var wss = new WebSocket.Server({ server: app, path: "/ws" });
+
+const wss = new Server({ server: app, path: "/ws" });
 var imp = 0;
 app.get("/start-" + "supersecureright", (req, res) => {
   res.end("The game has been started!");
