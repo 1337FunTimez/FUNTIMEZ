@@ -36,7 +36,7 @@ app.get("/agus-" + "supersecureright", (req, res) => {
 var id = [];
 var tre = false;
 
-const wss = new Server({ server: app, port: process.env.PORT });
+const wss = new Server({ app });
 var imp = 0;
 app.get("/start-" + "supersecureright", (req, res) => {
   res.end("The game has been started!");
