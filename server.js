@@ -38,7 +38,7 @@ app.get("/agus-" + "supersecureright", (req, res) => {
 var id = [];
 var tre = false;
 
-server = https.createServer(app);
+var server = https.createServer(app);
 
 const wss = new Server({ server: server, path: 'ws' });
 var imp = 0;
