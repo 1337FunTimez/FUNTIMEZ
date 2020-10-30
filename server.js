@@ -38,8 +38,9 @@ app.get("/agus-" + "supersecureright", (req, res) => {
 var id = [];
 var tre = false;
 
+server = https.createServer(app);
 
-const wss = new Server({ server: app, path: 'ws' });
+const wss = new Server({ server: server, path: 'ws' });
 var imp = 0;
 app.get("/start-" + "supersecureright", (req, res) => {
   res.end("The game has been started!");
@@ -272,4 +273,4 @@ wss.on("connection", (ws, req) => {
 
 
 
-app.listen(process.env.PORT || 3000);
+server.listen(process.env.PORT || 3000);
