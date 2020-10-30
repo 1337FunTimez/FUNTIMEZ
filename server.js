@@ -36,6 +36,10 @@ app.get("/agus-" + "supersecureright", (req, res) => {
 var id = [];
 var tre = false;
 
+
+app.listen(process.env.PORT || 3000);
+
+
 const wss = new Server({ app });
 var imp = 0;
 app.get("/start-" + "supersecureright", (req, res) => {
@@ -266,5 +270,3 @@ wss.on("connection", (ws, req) => {
     }
   });
 });
-
-app.listen(process.env.PORT || 3000);
