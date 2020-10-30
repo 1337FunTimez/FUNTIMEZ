@@ -42,7 +42,7 @@ var tre = false;
 app.listen(process.env.PORT || 3000);
 
 
-const wss = new Server({ app });
+const wss = new Server({ server: app });
 var imp = 0;
 app.get("/start-" + "supersecureright", (req, res) => {
   res.end("The game has been started!");
