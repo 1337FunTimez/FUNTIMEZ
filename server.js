@@ -45,6 +45,7 @@ var imp = 0;
 app.get("/start-" + "supersecureright", (req, res) => {
   res.end("The game has been started!");
   imp = Math.floor(Math.random() * wss.clients.length);
+  console.log(imp);
   wss.clients.forEach(client => {
     console.log(client.id);
     client.send("imp:" + imp);
